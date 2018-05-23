@@ -1,0 +1,95 @@
+<html>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+ <link href= "stylesheet.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      
+<link href="https://fonts.googleapis.com/css?family=Cinzel|Playfair+Display" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+<body>
+    
+    <h1>EXPLORE</h1>
+    
+      <div class="menu">
+                
+         <a href ="#" id = "hamburger"><i class="material-icons"> menu </i></a>
+         
+        <div class="nav">
+            <a class="nav-item" href="index.html">MY SITE</a>
+             <a class="nav-item" href="Explore.html">EXPLORE TASK</a>
+             <a class="nav-item" href="ResearchPaper.html">RESEARCH PAPER</a>
+             <a class="nav-item" href="CreateTask.html">CREAT TASK</a>
+             <a class="nav-item" href="strength.html">STRENGTH</a>
+             <a class="nav-item" href="college.html">COLLEGE</a>
+             
+            
+            
+        </div>
+       </div> 
+    
+<p>  2C
+	The main algorithm I used was function draw(). In this function
+	I coded the for loop that allows the petals to multiply around 
+	the circle of the flower.
+</p>
+<div class= "code">
+let petals = 15;
+<br>
+for (let i = 0; i < petals; i++) {
+<br>
+rotate(25);
+<br>
+ellipse(10, 45, 20, 50);
+    </div>
+    
+<p> This code allows the ellipse to keep adding itself around the 
+circle of the flower if its less than let petals, petals is 15, 
+the amount needed to completely surround the circle with petals 
+that's why the loop ends at 15. If this program did not include 
+this algorithm, I would have had to manually code each individual 
+ellipse to surround the circle of the flower.
+</p>
+ 
+<p> I used function draw() again to include the algorithm below;</p>
+
+<div class= "code">
+for (let i = 0; i < petalX.length; i++) {
+<br>
+ fill(226, 177, 61);
+ <br>
+ ellipse(petalX[i], petalY[i], 20, 50);
+ <br>
+ petalY[i] = petalY[i] + petalSpeed[i];
+<br>
+ if (petalY[i] > 420) {
+<br>
+ petalY[i] = 250;
+<br>
+petalY[i] = 250;
+</div>
+    
+     
+<p> 2D
+The purpose of this code is to let each petal fall individually at 
+a specific speed. The code petals--; makes it so when a petals 
+falls from the circle it will  give the effect of fallining. If the
+algorithm did not include this the petals would not subtract from 
+the circle and would not give the effect of the flower losing petals.
+The reason why I chose this abstraction was because its very easy to 
+simplify with loops. If I didn't choose these abstractions I would 
+easily put into loops.
+</p>
+    
+    
+    
+     <script>
+           $("#hamburger").click(function(){
+               $(".nav").toggle();
+              
+           });
+       </script>
+      
+</body>
+    
+</html>
