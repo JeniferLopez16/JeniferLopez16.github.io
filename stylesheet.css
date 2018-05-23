@@ -75,3 +75,6 @@ h3{
  text-align:center;
  }
  
+ iframe {
+    border: none;
+ }

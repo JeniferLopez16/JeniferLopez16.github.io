@@ -1,0 +1,124 @@
+<html>
+    <head>
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.js"></script>
+    </head>
+    <body>
+        <script>
+            
+            let timer = 0;
+            
+            var x;
+            var y;
+            let petalY = [];
+            let petalX = [];
+            let petalSpeed = [];
+            let angle = [23];
+            let h = 20; 
+            let s = 160;  
+            let b = 9000; 
+            let petals = 15;
+            
+            
+            function setup()
+            {
+                createCanvas(600, 400);
+                 frameRate(10);
+                angleMode(DEGREES);
+            
+            
+                
+                petalX[0] = 320;
+                petalX[1] = width / 2;
+                
+                petalY[0] = 250;
+                petalY[1] = 250;
+                
+                petalSpeed[0] = 3;
+            }
+             
+            
+            function draw()
+            {
+                 drawGradient(100);
+                noStroke();
+                
+              
+                
+                timer = timer + 1;
+                
+                fill(255);
+                textSize(20);
+                text(timer, 20, 20);
+                noStroke();
+              
+            //Circle
+                 push();
+                 translate(300,200);
+                fill(0,30,0);
+                rect(-6,40,16,160,7);
+                pop();
+            
+                fill(124, 97, 32);
+                ellipse(width / 2, 250, 70, 70);
+            
+                for(let i = 0; i < petalX.length; i++){
+                fill(226, 177, 61);
+                ellipse(petalX[i], petalY[i],20,50);
+                
+                petalY[i] = petalY[i] + petalSpeed[i];
+                
+                if(petalY[i] > 420 ){
+                    petalY[i] = 250;
+                    petals--;
+                }
+                
+              
+                
+                
+                
+                
+            }
+            
+              push();
+              fill(244, 191, 66);
+              translate(300,250);
+               
+              for(let i = 0; i< petals; i++)
+              {
+                rotate(25);
+                ellipse(10,45,20,50);
+              }
+              
+            pop();
+            
+             
+             
+            }
+            
+            function drawGradient(count)
+            {
+                
+                let blockHeight = 400 / count;
+                
+              
+                let brightStep = b/ count;
+                
+               
+                let brightness = b;
+                
+                for(let i = 0; i <count; i++){
+                fill(h,s,brightness);
+                rect(0,i * blockHeight,600,blockHeight);
+                brightness = brightness - brightStep;
+                }
+               
+              
+            }
+
+
+
+
+  
+        </script>
+    </body>
+</html>
